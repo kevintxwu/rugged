@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Fanwood+Text' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="jquery.flexslider-min.js"></script>
+  <link rel="shortcut icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
+  <title> RUGGED </title>
+  <style>
+  @font-face {
+    font-family: 'abraham_lincolnregular';
+    src: url('abrahamlincoln-webfont.eot');
+    src: url('abrahamlincoln-webfont.eot?#iefix') format('embedded-opentype'),
+         url('abrahamlincoln-webfont.woff2') format('woff2'),
+         url('abrahamlincoln-webfont.woff') format('woff'),
+         url('abrahamlincoln-webfont.ttf') format('truetype'),
+         url('abrahamlincoln-webfont.svg#abraham_lincolnregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    color: #333;
+    min-width: 1200px;
+    font-family: 'Fanwood Text', serif;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+
+  h1 {
+    margin: 0px;
+    margin-top: 40px;
+    font-size: 60px;
+    letter-spacing: 5px;
+    line-height: 50px;
+    font-family: 'abraham_lincolnregular', serif;
+    font-weight: 400;
+  }
+
+  #header {
+    position: relative;
+    left: 8px;
+  }
+
+  h2 {
+    font-size: 48px;
+    font-family: 'abraham_lincolnregular', serif;
+    letter-spacing: 5px;
+    font-weight: 400;
+    padding-top: 15px;
+    margin: 0;
+  }
+
+  h3 {
+    padding-top: 15px;
+    font-size: 60px;
+    font-family: 'Great Vibes', serif;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 25px 0 0 0;
+    line-height: 0px;
+  }
+
+  p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 36px;
+    color: #4D4D4D;
+  }
+
+  .white {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    text-align: center;
+    background: #c4c4c4;
+    padding: 75px;
+    overflow-x: hidden;
+  }
+
+  .content {
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  #bae {
+    background: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    padding-top: 75px;
+  }
+
+  #about-container {
+    background-image: url(mountains.jpg);
+    padding-bottom: 225px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  input[type="text"] {
+    padding: 10px 15px 10px 15px;
+    width: 520px;
+    margin: 15px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    color: #4D4D4D;
+    background: #E3E3E3;
+    border: none;
+    font-family: 'Fanwood Text', serif;
+  }
+
+  input[type="submit"], input[type="button"] {
+    padding: 15px 15px 13px 15px;
+    width: 250px;
+    margin: 15px;
+    margin-top: 10px;
+    font-size: 24px;
+    color: #fff;
+    background: #666;
+    border: none;
+    font-family: 'abraham_lincolnregular', serif;
+    letter-spacing: 3px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    background: #333;
+  }
+
+  #light-blue {
+    background: #3ac7eb;
+  }
+
+  .light-gray {
+    background: #E3E3E3;
+  }
+
+  .light-blue {
+    background: #3ac7eb;
+  }
+
+  .dark-blue {
+    background: #0b99dc;
+  }
+
+  input[type="submit"]:hover, input[type="button"]:hover {
+    cursor: pointer;
+  }
+
+  .med-content {
+    width: 1000px;
+    margin: auto;
+    margin-top: 75px;
+  }
+
+  .image {
+    float: left;
+    border: 5px solid #034fa6;
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border-radius: 80px;
+    background: url(shirt.svg);
+    background-color: #fff;
+    background-size: cover;
+  }
+
+  .sticker {
+    background: url(sticker.svg);
+    background-color: #fff;
+    background-size: cover;
+  }
+
+  .bottle {
+    background: url(bottle.svg);
+    background-color: #fff;
+    background-size: cover;
+  }
+
+  .party {
+    background: url(party.svg);
+    background-color: #fff;
+    background-size: cover;
+  }
+
+  .trophy {
+    background: url(trophy.svg);
+    background-color: #fff;
+    background-size: cover;
+  }
+
+  .label {
+    float: left;
+    text-align: center;
+    width: 200px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  #bae-pic {
+    margin: auto;
+    background: url(logo.svg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+  }
+
+  .image-kit {
+    float: left;
+    margin: 0;
+    margin-bottom: 50px;
+    width: 380px;
+    height: 380px;
+    border-radius: 200px;
+    border: 10px solid #034fa6;
+    background-color: #fff;
+  }
+
+  .description {
+    float: left;
+    margin: 0;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    width: 600px;
+    height: 400px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+  }
+
+  .d-p {
+    margin-top: 40px;
+  }
+
+  .device {
+    background: url(device.svg);
+    background-size: cover;
+  }
+
+  .badges {
+    background: url(allbae-04.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #e3f3f7;
+  }
+
+  #home-vid, #home-pic {
+    position: fixed; top: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url("movie.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #white-bg {
+    background: #fff;
+  }
+
+  #red {
+    color: #c31;
+  }
+
+  img {
+    position: relative;
+    z-index: 5;
+    height: 500px;
+    top: -330px;
+    margin: auto;
+    display: block;
+  }
+
+  .container-2 {
+    position: relative;
+    z-index: 2;
+    top: -560px;
+  }
+
+  #white-bg {
+    padding-top: 250px;
+  }
+
+  .no-margin-top {
+    margin-top: -40px;
+  }
+
+  ::selection {
+    background: #111; /* WebKit/Blink Browsers */
+    color: #fff;
+  }
+
+  ::-moz-selection {
+    background: #111; /* Gecko Browsers */
+    color: #fff;
+  }
+
+  @media (max-width: 1400px) {
+    img {
+      width: 100%;
+      height: auto;
+      padding-left: 0;
+    }
+  }
+  </style>
+</head>
+<body>
+  <video autoplay loop poster="movie.jpg" id="home-vid" volume="0">
+    <source src="movie.mp4" type="video/mp4">
+  </video>
+  <div class="container" id="bae">
+    <h1 class="white stroke" id="header"> THE SHAMPOO </h1>
+    <h3 class="white stroke"> For </h3>
+    <h1 class="white stroke" id="header"> ADVENTURERS & CONNOISSEURS </h1>
+  </div>
+  <img src="bottle.png">
+  <div class="container container-2" id="white-bg">
+    <div class="content">
+      <p class="no-margin-top"> The Rugged Sierra Nevada Shampoo line is a shampoo line based on the four seasons: Spring, Summer, Fall, and Winter. We've included a special formula using organic ingredients for luscious hair and scents that truly embody nature. </p>
+    </div>
+  </div>
+  <div class="container container-2" id="about-container">
+    <div class="content">
+      <h2 id="about"> FIND OUT MORE </h2>
+      <p> Rugged Sierra Nevada Shampoo is currently in development, but fret not! If the concept of smelling like the greatest scents of the outdoors, with naturally healthy hair is intriguing, you can sign up below for exclusive samples and information. </p>
+      <form id="email">
+        <input type="text" placeholder="Email Address"></input>
+        <input type="submit" value="SIGN UP" onclick="submit()"></input>
+      </form>
+    </div>
+  </div>
+  <script>
+    var vid = document.getElementById("home-vid");
+    vid.volume = 0.0;
+  </script>
+</body>
+</html>
